@@ -38,8 +38,42 @@ if (isset($_GET['empty'])) {
 
 // ===== Place Order =====
 if (isset($_GET['order'])) {
-    unset($_SESSION['cart']);   // clear cart
-    $order_done = true;         // show success message
+    if (!isset($_SESSION['user_id'])) {
+        // agar login nahi hai to login page bhej do
+        header("Location: login.php");
+        exit();
+    }
+
+    $user_id = $_SESSION['user_id'];
+    $total = 0;
+
+    // calculate total
+    foreach ($_SESSION['cart'] as $id => $qty) {
+        $res = mysqli_query($conn, "SELECT price FROM products WHERE id=$id");
+        if ($row = mysqli_fetch_assoc($res)) {
+            $total += $row['price'] * $qty;
+        }
+    }
+
+    // insert order
+    $query = "INSERT INTO orders (user_id, total, created_at) 
+              VALUES ($user_id, $total, NOW())";
+    mysqli_query($conn, $query);
+    $order_id = mysqli_insert_id($conn);
+
+    // insert order items
+    foreach ($_SESSION['cart'] as $id => $qty) {
+        $res = mysqli_query($conn, "SELECT price FROM products WHERE id=$id");
+        if ($row = mysqli_fetch_assoc($res)) {
+            $price = $row['price'];
+            mysqli_query($conn, "INSERT INTO order_items (order_id, product_id, quantity, price) 
+                                 VALUES ($order_id, $id, $qty, $price)");
+        }
+    }
+
+    // clear cart
+    unset($_SESSION['cart']);
+    $order_done = true;
 }
 
 include("../includes/header.php"); 
@@ -52,6 +86,7 @@ include("../includes/header.php");
         <h2>🎉 Order Successful!</h2>
         <p>Thanks for shopping with <b>Chor Bajar</b>. Your order has been placed successfully.</p>
         <a href="index.php" class="btn btn-primary">Continue Shopping</a>
+        <a href="myorders.php" class="btn btn-success">View My Orders</a>
     </div>
 <?php elseif (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0): ?>
     <div class="alert alert-info">Cart is empty.</div>
