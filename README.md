@@ -8,7 +8,8 @@ https://github-production-user-asset-6210df.s3.amazonaws.com/228237575/494699319
 
 A complete e-commerce platform built with PHP, MySQL, and Bootstrap. Chor Bajar offers authentic products at incredibly affordable prices with a fun, engaging user experience.
 
-https://github.com/hydroo-dev/chor-bajar/blob/main/assets/images/logo.png
+<img width="1024" height="1536" alt="logo" src="https://github.com/user-attachments/assets/2aa60ce9-b31e-4967-afc6-37b89dbd4e49" />
+
 
 ## 🎯 Features
 
