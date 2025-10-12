@@ -1,11 +1,10 @@
-https://github-production-user-asset-6210df.s3.amazonaws.com/228237575/494699319-20091d35-d868-46e6-a2d2-14641d3993a9.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250927%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250927T082645Z&X-Amz-Expires=300&X-Amz-Signature=02ccae62f0b35df367dfbb2b5a4357edec1e41fcd09563b98c994f0c278480de&X-Amz-SignedHeaders=host
+# 🥷 Chor Bajar — E-commerce Website  
 
+> **Sab kuch asli, bas daam chori jaise! 💸**
 
+🎥 **Demo:** [`ChorBajarWorking.mp4`](./ChorBajarWorking.mp4)
 
-# 🥷 Chor Bajar - E-commerce Website
-
-**Sab kuch asli, bas daam chori jaise!**
-
+---
 A complete e-commerce platform built with PHP, MySQL, and Bootstrap. Chor Bajar offers authentic products at incredibly affordable prices with a fun, engaging user experience.
 
 <img width="1024" height="1536" alt="logo" src="https://github.com/user-attachments/assets/2aa60ce9-b31e-4967-afc6-37b89dbd4e49" />
