@@ -2,7 +2,8 @@
 
 > **Sab kuch asli, bas daam chori jaise! 💸**
 
-🎥 **Demo:** [`ChorBajarWorking.mp4`](./ChorBajarWorking.mp4)
+🎥 Demo: [ChorBajarWorking.mp4](ChorBajarWorking.mp4)
+
 
 ---
 A complete e-commerce platform built with PHP, MySQL, and Bootstrap. Chor Bajar offers authentic products at incredibly affordable prices with a fun, engaging user experience.
